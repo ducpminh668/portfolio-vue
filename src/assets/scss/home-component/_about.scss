@@ -1,0 +1,168 @@
+#about {
+  height: auto;
+  .about-content {
+    .personal-statement {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      div {
+        margin: 10px;
+      }
+      .personal-infor {
+        flex: 1 0 70%;
+        p {
+          text-align: justify;
+          white-space: pre-wrap;
+          text-justify: inter-word;
+          &::first-letter {
+            padding-left: 10px;
+          }
+        }
+      }
+      .personal-img {
+        flex: 1 0 24%;
+        img {
+          border-radius: 5px;
+          @include transition-primary;
+        }
+      }
+    }
+    .download-btn-block {
+      margin: 30px;
+      .btn-download {
+        @include btn-light-green;
+        font-size: calc(12px + 1vw);
+      }
+    }
+    .about-detail-block {
+      margin: 20px 0;
+      .block__header {
+        display: flex;
+        justify-content: space-between;
+        h3 {
+          text-align: left;
+          display: inline;
+        }
+        .material-icons {
+          @include icon-show-panel;
+        }
+      }
+      .bottom-card {
+        @include bottom-card;
+      }
+      .skill-set {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .skill-set__item {
+          flex: 1 0 30%;
+          margin: 10px;
+          padding: 20px;
+          font-weight: 700!important;
+          @include card-grey;
+          @include hover-light-green;
+          &:hover {
+            animation: sinkUpSlow 1.5s infinite;
+          }
+          h4 {
+            text-align: left;
+            word-break: break-word;
+          }
+          .item-details {
+            max-width: 100px;
+            float: right;
+            p {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #about {
+    .about-content {
+      .personal-statement {
+        .personal-img {
+          img {
+            width: 350px;
+            height: 350px;
+            @include transition-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #about {
+    .about-content {
+      .skill-set {
+        .skill-set__item {
+          min-width: 300px;
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #about {
+    .about-content {
+      .personal-statement {
+        .personal-img {
+          img {
+            width: 250px;
+            height: 250px;
+            @include transition-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 414px) {
+  #about {
+    .about-content {
+      .personal-statement {
+        p {
+          padding:  0px 5px 0px 5px;
+        }
+        img {
+          width: 330px;
+          height: 330px;
+        }
+      }
+      .download-btn-block {
+        margin: 50px 30px 50px 30px;
+        .btn-download {
+          font-size: calc(24px + 1vw);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #about {
+    .about-content {
+      .personal-statement {
+        img {
+          height: 250px;
+        }
+      }
+      .download-btn-block {
+        .btn-download {
+          font-size: calc(20px + 1vw);
+        }
+      }
+    }
+  }
+}
+

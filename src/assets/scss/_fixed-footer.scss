@@ -1,0 +1,56 @@
+#fixed-footer {
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  @include dark-bg-mobile;
+  right: 0;
+  z-index: 3;
+  .social-block {
+    display: flex;
+    justify-content: space-evenly;
+    transition: all .3s ease-in-out;
+    .social-item {
+      flex-basis: 25%;
+      display: flex;
+      justify-content: center;
+      padding: 7px;
+      a {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        color: $light-green;
+      }
+      .material-icons {
+        color: $light-green;
+        font-size: 1.5rem;
+        transform: scale(1.5);
+        transition: all .3s ease-in-out;
+        &.isScroll {
+          transform: rotate(180deg) scale(1.5);
+        }
+      }
+    }
+  }
+  .contact-block {
+    display: flex;
+    justify-content: space-evenly;
+    .contact-item {
+      flex-basis: 25%;
+      background-color: $light-green;
+      padding: 3px;
+      a {
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+      }
+    }
+  }
+  #process-line {
+    height: 5px;
+    background-image: linear-gradient(to right, $linkedin-blue , $plum);
+    @include transition-primary;
+  }
+}

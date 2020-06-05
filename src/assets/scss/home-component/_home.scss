@@ -1,0 +1,42 @@
+#home {
+  height: 650px;
+  background-color: rgba($color: $light-black, $alpha: 0.1);
+  position: relative;
+  .home-content {
+    flex-direction: column;
+    height: 100%;
+    margin: 0px 50px 0px 50px;
+    h1 {
+      animation: fadeIn;
+      animation-duration: 2s;
+    }
+    h2 {
+      animation: fadeIn;
+      animation-duration: 3s;
+    }
+  }
+  .expand-sector {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 3s;
+    .material-icons {
+      font-size: calc(32px + 3vw);
+      animation: sinkUp 2s infinite;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  #home {
+    height: 550px;
+    .home-content {
+      height: 50%;
+    }
+    .expand-sector {
+      bottom: 30%;
+    }
+  }
+}

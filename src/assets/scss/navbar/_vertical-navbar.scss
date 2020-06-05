@@ -1,0 +1,121 @@
+
+.vertical-navbar {
+  background-color: rgba($color: $light-black, $alpha: 0.8);
+  width: 60px;
+  max-width: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  z-index: 6;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  .logo {
+    margin: 30px 15px 30px 15px;
+    }
+  .nav-menu {
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: all .5s ease-in-out;
+    .pos-current {
+      background-color: white;
+      padding: 5px;
+      margin-right: -5px;
+      margin-left: 10px;
+      border-radius: 3px;
+      transition: all .5s ease-in-out;
+      .material-icons {
+        color: black;
+      }
+      .item-name {
+        color: black;
+      }
+    }
+    li {
+      position: relative;
+      .material-icons {
+        font-size: calc(32px + 1vw);
+        color: white;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+      }
+      .item-name {
+        font-weight: 700;
+        display: none;
+      }
+      .tooltiptext {
+        clip-path: polygon(10% 0, 100% 1%, 100% 100%, 10% 98%, 0% 50%);
+        visibility: hidden;
+        width: 120px;
+        background-color: rgba($color: $light-grey, $alpha: 0.8);;
+        color: black;
+        text-align: center;
+        padding: 6px 0;
+        top: 0;
+        left: 120%;
+        position: absolute;
+        z-index: 1;
+        font-weight: 700;
+      }
+      &:hover {
+        .tooltiptext {
+        visibility: visible;
+        animation: slideLeft;
+        animation-duration: 1s;
+        }
+      }
+    }
+  }
+  &.mobile-view {
+    background-color: rgba($color: $light-black, $alpha: 1)!important;
+    transform: translateX(-110%);
+    &.show {
+      transform: translateX(0%);
+    }
+  }
+}
+.active {
+  width: 150px;
+  transition: all 0.4s ease-in-out;
+  .logo {
+    filter: invert(100%);
+    margin: 30px -15px 30px 15px;
+    &:hover {
+      filter: invert(0%);
+      }
+    }
+  li {
+    justify-content: start;
+    margin-left: 10px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    .tooltiptext {
+      display: none;
+    }
+    .item-name {
+      color: white;
+      display: block!important;
+      margin-left: 10px;
+      animation: fadeIn;
+      animation-duration: .7s;
+    }
+    &:hover {
+      background-color: white;
+      padding: 5px;
+      margin-right: -5px;
+      .material-icons {
+        color: black!important;
+      }
+      .item-name {
+        color: black;
+      }
+    }
+  }
+}

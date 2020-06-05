@@ -1,0 +1,46 @@
+.horizontal-navbar {
+  height: 100px;
+  @include dark-bg;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5vw;
+  width: 100%;
+  z-index: 5;
+  transition: all .5s ease-in-out;
+  animation: fadeIn;
+  animation-duration: .5s;
+  a {
+    color: $light-grey;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .toggle-btn {
+    border: 3px solid $light-green;
+    background-color: transparent;
+    border-radius: 5px;
+    span {
+      color: $light-green;
+      font-size: calc(32px + 1vw);
+      transition: all .3s ease-in-out;
+      &.toggled {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.scroll-navbar {
+  background-color: $darker-black;
+  height: 70px;
+  transition: all 0.5s ease-in-out;
+  position: fixed!important;
+  img {
+    height: 50px;
+    width: 100px;
+  }
+  .toggle-btn {
+    span {
+      font-size: calc(28px + 1vw);
+    }
+  }
+}

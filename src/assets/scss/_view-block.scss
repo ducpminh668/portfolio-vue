@@ -1,0 +1,11 @@
+.view-block {
+  margin: 20px;
+  @include dark-bg;
+}
+
+@media only screen and (max-width: 414px) {
+  .view-block {
+    @include mobile-margin;
+    @include dark-bg-mobile;
+  }
+}
